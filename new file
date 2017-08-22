@@ -1,0 +1,26 @@
+location.search
+"?submitted=true&firstname=Theo&lastname=Bohnen&name=&email=&dietory+requirements%3A="
+location.search.split('&')
+Array [ "?submitted=true", "firstname=Theo", "lastname=Bohnen", "name=", "email=", "dietory+requirements%3A=" ]
+var queryStringValues = location.search.split('&')
+undefined
+queryStringValues[1]
+"firstname=Theo"
+queryStringValues[1].split('=')
+Array [ "firstname", "Theo" ]
+queryStringValues[1].split('=')[1]
+"Theo"
+var firstname = queryStringValues[1].split('=')[1]
+undefined
+firstname
+"Theo"
+$.param(location)
+TypeError: 'assign' called on an object that does not implement interface Location.
+$.param(location.search)
+"0=%3F&1=s&2=u&3=b&4=m&5=i&6=t&7=t&8=e&9=d&10=%3D&11=t&12=r&13=u&14=e&15=%26&16=f&17=i&18=r&19=s&20=t&21=n&22=a&23=m&24=e&25=%3D&26=T&27=h&28=e&29=o&30=%26&31=l&32=a&33=s&34=t&35=n&36=a&37=m&38=e&39=%3D&40=B&41=o&42=h&43=n&44=e&45=n&46=%26&47=n&48=a&49=m&50=e&51=%3D&52=%26&53=e&54=m&55=a&56=i&57=l&58=%3D&59=%26&60=d&61=i&62=e&63=t&64=o&65=r&66=y&67=%2B&68=r&69=e&70=q&71=u&72=i&73=r&74=e&75=m&76=e&77=n&78=t&79=s&80=%25&81=3&82=A&83=%3D"
+$.param("name=theo")
+"0=n&1=a&2=m&3=e&4=%3D&5=t&6=h&7=e&8=o"
+location.search
+"?submitted=true&firstname=Theo&lastname=Bohnen&name=&email=&dietory+requirements%3A="
+
+        
