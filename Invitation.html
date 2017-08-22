@@ -12,12 +12,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
-    function validateForm() {
-      var x = document.forms["form"]["firstname"].value;
-      if (x == "") {
-        alert("Name must be filled out");
-        return false;
-      }
+     function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("firstname").value;
     }
   </script>
 
@@ -80,7 +77,6 @@
 
 
     <div class="col-sm-4 " id="form">
-
       <form name="form" onsubmit="" action="submitted.html">
         <div class="row">
           <div class="col-md-6"> First name: </div>
@@ -99,7 +95,7 @@
           <div class="col-md-6"> <input type="text" name="email" id="email" value="" /></div>
         </div>
         <div class="row">
-          <div class="col-md-6"> dietory requirements: </div>
+          <div class="col-md-6"> dietory-requirements: </div>
           <div class="col-md-6"> <input type="text" name="dietory requirements:" id="dietory requirements:" value=""></div>
           <div class="row">
             <div class="col-md-4" data-toggle="popover"> Bringing someone?</div>
