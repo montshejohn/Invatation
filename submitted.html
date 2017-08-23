@@ -5,7 +5,7 @@
         <meta charset="utf-8"/>
 
 
-        <p id="hu">thank you for your responce:  </p>
+        <p id="hu"class="thing">thank you for your responce:  </p>
         <script>
             var url = window.location.search;
             var urlSplitted = location.search.slice(1).split("&");
@@ -20,12 +20,14 @@
             var contacts = urlSplitted[2].split("=")[1];
             var email = urlSplitted[3].split("=")[1];
             var dietory = urlSplitted[4].split("=")[1];
-                      
+              var fname = firstname;        
                       
 
             document.getElementById("hu").innerHTML = str +  firstname + " " + lastname;
-
-                
+            
+               
+            
+ 
 </script>
         </script>
 
@@ -35,38 +37,75 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    font-size:23px; 
 }
 
 td, th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
+    border: 8px solid burlywood;
+    text-align: center;
+    padding: 10px;
+}
+img{
+    padding-right:100%;
+}
+.thing{
+    font-family:sans-serif;
+    font-size:55px;  
 }
 
-tr:nth-child(even) {
-    background-color: white;
-}
 </style>
     <body>
 
-<table>
+
+<div class="bg"></div>
+
+
+
+<button onclick="myFunction()">click this button to see you inputs</button>
+<table id ="hey">
   <tr>
-    <th>names</th>
-    <th>surname</th>
-    <th>Contact</th>
-    <th>email</th>
-    <th>dietory-requirements</th>
+    <th>In this area on the form</th>
+    <th>Your input was</th>
+    
+  </tr>
+   <tr>
+    <td>Name</td>
+    <td></td>
   </tr>
   <tr>
-    <td><span id="firstname"><span></td>
-    <td><span id="lastname"><span></td>
-    <td><span id="contacts"><span></td>
-    <td><span id="email"><span></td>
-    <td><span id="dietory"><span></td>
+    <td>last name</td>
+    <td></td>
   </tr>
+  <tr>
+    <td>Contact</td>
+    <td></td>
+</tr>
+ <tr>
+    <td>email</td>
+    <td></td>
+</tr>
+ <tr>
+    <td>dietory-requirements</td>
+    <td></td>
+  </tr>
+</table>
  
 </table>
 
+<script>
+function myFunction() {
+    var x = document.getElementById("hey").rows[1].cells;
+    x[1].innerHTML = firstname;
+    var x = document.getElementById("hey").rows[2].cells;
+    x[1].innerHTML = lastname;
+    var x = document.getElementById("hey").rows[3].cells;
+    x[1].innerHTML = contacts;
+    var x = document.getElementById("hey").rows[4].cells;
+    x[1].innerHTML = email;
+    var x = document.getElementById("hey").rows[5].cells;
+    x[1].innerHTML = dietory;
+}
+</script>
 
 
     </body>
